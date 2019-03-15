@@ -332,7 +332,7 @@
                                                             <div class="form-group col-lg-4">
                                                                 <label class="col-form-label text-muted" for="SituacionAca">SITUACION ACADEMICA: </label>
                                                                 <div class="col-sm-auto">
-                                                                    <s:textfield  cssClass="form-control text-uppercase" name="al.SITUACIONACA" id="al.SITUACIONACA" ></s:textfield>
+                                                                    <s:select  name="al.SITUACIONACA" id="al.SITUACIONACA" list="ListaSituacionAlumno"  listKey="ID_SITUACION_ACA"  listValue="NOM_SITUACION"  headerKey="" headerValue="--SELECCIONE--" cssClass="form-control " ></s:select>                                                                                                                                                                           
                                                                     <s:fielderror fieldName="ErrorSituacioAca" cssClass="alert alert-danger"/>
                                                                 </div> 
                                                             </div> 

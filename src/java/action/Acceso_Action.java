@@ -47,6 +47,7 @@ public class Acceso_Action extends ActionSupport implements SessionAware {
     private List<VerificaArchivoBean> VerificaArchivos = new ArrayList<>();
     public List<DatosBean> ListaMunicipios = new ArrayList<DatosBean>();
     private List<DatosBean> ListaTipoAlumno = new ArrayList<>();
+    private List<DatosBean> ListaSituacionAlumno = new ArrayList<>();
     public ArrayList<DatosBean> ListaAlumnos = new ArrayList<DatosBean>();
     public ArrayList<DatosBean> ListaAlumnosBeca = new ArrayList<DatosBean>();
     public List<DatosBean> ListaCarreras = new ArrayList<DatosBean>();
@@ -343,6 +344,7 @@ public class Acceso_Action extends ActionSupport implements SessionAware {
                                 ListaMunicipios = con.listaMunicipios();
                                 ListaAlumnos = (ArrayList<DatosBean>) con.listaAlumnos(datos);
                                 ListaTipoAlumno = con.ConsultaTipoAlumno();
+                                ListaSituacionAlumno = con.ConsultasituacionAlumno();
                                 ListaAlumnosBeca = (ArrayList<DatosBean>) con.listaAlumnosBeca(datos);
 
                                 Constantes.enviaMensajeConsola("REGRESO DE CONSULTAS");
@@ -1066,6 +1068,16 @@ public class Acceso_Action extends ActionSupport implements SessionAware {
     public void setListaTipoAlumno(List<DatosBean> ListaTipoAlumno) {
         this.ListaTipoAlumno = ListaTipoAlumno;
     }
+
+    public List<DatosBean> getListaSituacionAlumno() {
+        return ListaSituacionAlumno;
+    }
+
+    public void setListaSituacionAlumno(List<DatosBean> ListaSituacionAlumno) {
+        this.ListaSituacionAlumno = ListaSituacionAlumno;
+    }
+    
+    
 
     public ArrayList<DatosBean> getListaAlumnos() {
         return ListaAlumnos;

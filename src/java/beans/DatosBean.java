@@ -49,7 +49,9 @@ public class DatosBean {
     private String BECA;
     private String ID_TIPOALUM;
     private String NOM_TIPO;
-            
+    
+    private String ID_SITUACION_ACA;
+    private String NOM_SITUACION;
 
     private String ID_CVE_CAR;
     private String CLAVECARRERA;
@@ -65,13 +67,12 @@ public class DatosBean {
     private String CARGO_RESPONSABLE;
     private String TELEFONO_RESPONSABLE;
     private String EMAIL_RESPONSABLE;
-    
+
     private String ID_CAT_ASE;
     private String CURP_ASESORI;
     private String NOMBREAI;
     private String APELLIDOPAI;
     private String APELLIDOMAI;
-
 
     //*******************************beans peter******************************************************
     private String FECHA_INICIO;
@@ -90,41 +91,34 @@ public class DatosBean {
 
     private String TOTAL_HOMBRE;
     private String TOTAL_MUJER;
-     
-    
+
     // ALUMNOS NUEVO INGRESO SE REFIERE A PROYECTOS  PRUEBA DE CONBINACION
-    
     private String ALUMNOS_NUEVO_INGRESO;
     private String ALUMNOS_ACTIVOS_PERIODO;
-     private String EGRESADOS;
-     private String ALUMNOS_NUEVOS;
-     
-     private String TIPO_ALUMNO;
-      private String TOTAL_TIPO_ALUMNO;
-       private String ALUMNOS_ACTIVOS_GENERAL;
-        private String ALUMNOS_INACTIVOS_GENERAL;
-         private String ALUMNOS_EGRESADOS_GENERAL;
-          private String TOTAL_ALUMNOS_DUAL;
-           private String TOTAL_PROYECTOS;
-            private String TOTAL_REINGRESOS;
-             private String TOTAL_BECAS;
-              private String TOTAL_HOMBRE_GENERAL;
-               private String TOTAL_MUJER_GENERAL;
-                private String TOTAL_BECA_GENERAL;
-                
-                 private String MUNICIPIO_ACTIVOS;
-                  private String MUNICIPIO_INACTIVOS;
-                   private String MUNICIPIO_EGRESADOS;
-                     private String TOTAL_ALUMNOS_EMPRESA;
-                     private String RFC;
-                      private String RAZON_SOCIAL;
-                       private String NOM_MUN;
+    private String EGRESADOS;
+    private String ALUMNOS_NUEVOS;
 
-                       
-                       
-                       
-                       
-                       
+    private String TIPO_ALUMNO;
+    private String TOTAL_TIPO_ALUMNO;
+    private String ALUMNOS_ACTIVOS_GENERAL;
+    private String ALUMNOS_INACTIVOS_GENERAL;
+    private String ALUMNOS_EGRESADOS_GENERAL;
+    private String TOTAL_ALUMNOS_DUAL;
+    private String TOTAL_PROYECTOS;
+    private String TOTAL_REINGRESOS;
+    private String TOTAL_BECAS;
+    private String TOTAL_HOMBRE_GENERAL;
+    private String TOTAL_MUJER_GENERAL;
+    private String TOTAL_BECA_GENERAL;
+
+    private String MUNICIPIO_ACTIVOS;
+    private String MUNICIPIO_INACTIVOS;
+    private String MUNICIPIO_EGRESADOS;
+    private String TOTAL_ALUMNOS_EMPRESA;
+    private String RFC;
+    private String RAZON_SOCIAL;
+    private String NOM_MUN;
+
     public String getNOM_MUN() {
         return NOM_MUN;
     }
@@ -132,10 +126,6 @@ public class DatosBean {
     public void setNOM_MUN(String NOM_MUN) {
         this.NOM_MUN = NOM_MUN;
     }
-                       
-                       
-                       
-                       
 
     public String getRAZON_SOCIAL() {
         return RAZON_SOCIAL;
@@ -144,8 +134,6 @@ public class DatosBean {
     public void setRAZON_SOCIAL(String RAZON_SOCIAL) {
         this.RAZON_SOCIAL = RAZON_SOCIAL;
     }
-                      
-                      
 
     public String getRFC() {
         return RFC;
@@ -154,10 +142,6 @@ public class DatosBean {
     public void setRFC(String RFC) {
         this.RFC = RFC;
     }
-                     
-                     
-                     
-                     
 
     public String getTOTAL_ALUMNOS_EMPRESA() {
         return TOTAL_ALUMNOS_EMPRESA;
@@ -167,10 +151,6 @@ public class DatosBean {
         this.TOTAL_ALUMNOS_EMPRESA = TOTAL_ALUMNOS_EMPRESA;
     }
 
-
-                   
-                   
-                   
     public String getMUNICIPIO_ACTIVOS() {
         return MUNICIPIO_ACTIVOS;
     }
@@ -194,11 +174,6 @@ public class DatosBean {
     public void setMUNICIPIO_EGRESADOS(String MUNICIPIO_EGRESADOS) {
         this.MUNICIPIO_EGRESADOS = MUNICIPIO_EGRESADOS;
     }
-                   
-                   
-                   
-                   
-                   
 
     public String getTOTAL_BECA_GENERAL() {
         return TOTAL_BECA_GENERAL;
@@ -207,7 +182,6 @@ public class DatosBean {
     public void setTOTAL_BECA_GENERAL(String TOTAL_BECA_GENERAL) {
         this.TOTAL_BECA_GENERAL = TOTAL_BECA_GENERAL;
     }
-                 
 
     public String getTOTAL_HOMBRE_GENERAL() {
         return TOTAL_HOMBRE_GENERAL;
@@ -225,10 +199,6 @@ public class DatosBean {
         this.TOTAL_MUJER_GENERAL = TOTAL_MUJER_GENERAL;
     }
 
-             
-             
-             
-             
     public String getTOTAL_REINGRESOS() {
         return TOTAL_REINGRESOS;
     }
@@ -244,10 +214,6 @@ public class DatosBean {
     public void setTOTAL_BECAS(String TOTAL_BECAS) {
         this.TOTAL_BECAS = TOTAL_BECAS;
     }
-             
-             
-             
-             
 
     public String getTOTAL_PROYECTOS() {
         return TOTAL_PROYECTOS;
@@ -256,10 +222,6 @@ public class DatosBean {
     public void setTOTAL_PROYECTOS(String TOTAL_PROYECTOS) {
         this.TOTAL_PROYECTOS = TOTAL_PROYECTOS;
     }
-           
-           
-           
-           
 
     public String getTOTAL_ALUMNOS_DUAL() {
         return TOTAL_ALUMNOS_DUAL;
@@ -268,9 +230,6 @@ public class DatosBean {
     public void setTOTAL_ALUMNOS_DUAL(String TOTAL_ALUMNOS_DUAL) {
         this.TOTAL_ALUMNOS_DUAL = TOTAL_ALUMNOS_DUAL;
     }
-          
-          
-          
 
     public String getALUMNOS_ACTIVOS_GENERAL() {
         return ALUMNOS_ACTIVOS_GENERAL;
@@ -295,12 +254,8 @@ public class DatosBean {
     public void setALUMNOS_EGRESADOS_GENERAL(String ALUMNOS_EGRESADOS_GENERAL) {
         this.ALUMNOS_EGRESADOS_GENERAL = ALUMNOS_EGRESADOS_GENERAL;
     }
-      
-         
-         
-         
-      
-         private String FECHA_INGRESO_DUAL;
+
+    private String FECHA_INGRESO_DUAL;
 
     public String getFECHA_INGRESO_DUAL() {
         return FECHA_INGRESO_DUAL;
@@ -310,10 +265,6 @@ public class DatosBean {
         this.FECHA_INGRESO_DUAL = FECHA_INGRESO_DUAL;
     }
 
-
-         
-         
-         
     public String getTOTAL_TIPO_ALUMNO() {
         return TOTAL_TIPO_ALUMNO;
     }
@@ -322,9 +273,6 @@ public class DatosBean {
         this.TOTAL_TIPO_ALUMNO = TOTAL_TIPO_ALUMNO;
     }
 
-     
-     
-     
     public String getTIPO_ALUMNO() {
         return TIPO_ALUMNO;
     }
@@ -332,9 +280,6 @@ public class DatosBean {
     public void setTIPO_ALUMNO(String TIPO_ALUMNO) {
         this.TIPO_ALUMNO = TIPO_ALUMNO;
     }
-     
-     
-     
 
     public String getALUMNOS_NUEVOS() {
         return ALUMNOS_NUEVOS;
@@ -344,10 +289,6 @@ public class DatosBean {
         this.ALUMNOS_NUEVOS = ALUMNOS_NUEVOS;
     }
 
-    
-     
-     
-
     public String getEGRESADOS() {
         return EGRESADOS;
     }
@@ -356,9 +297,6 @@ public class DatosBean {
         this.EGRESADOS = EGRESADOS;
     }
 
-     
-     
-     
     public DatosBean() {
     }
 
@@ -561,8 +499,6 @@ public class DatosBean {
     public void setCURPAB(String CURPAB) {
         this.CURPAB = CURPAB;
     }
-    
-    
 
     public String getSEXO() {
         return SEXO;
@@ -739,7 +675,22 @@ public class DatosBean {
     public void setNOM_TIPO(String NOM_TIPO) {
         this.NOM_TIPO = NOM_TIPO;
     }
-    
+
+    public String getID_SITUACION_ACA() {
+        return ID_SITUACION_ACA;
+    }
+
+    public void setID_SITUACION_ACA(String ID_SITUACION_ACA) {
+        this.ID_SITUACION_ACA = ID_SITUACION_ACA;
+    }
+
+    public String getNOM_SITUACION() {
+        return NOM_SITUACION;
+    }
+
+    public void setNOM_SITUACION(String NOM_SITUACION) {
+        this.NOM_SITUACION = NOM_SITUACION;
+    }
     
     
 
@@ -846,8 +797,6 @@ public class DatosBean {
     public void setID_CAT_ASE(String ID_CAT_ASE) {
         this.ID_CAT_ASE = ID_CAT_ASE;
     }
-    
-    
 
     public String getCURP_ASESORI() {
         return CURP_ASESORI;
@@ -880,9 +829,6 @@ public class DatosBean {
     public void setAPELLIDOMAI(String APELLIDOMAI) {
         this.APELLIDOMAI = APELLIDOMAI;
     }
-    
-    
-    
 
     //************************************beans peter**********************************************
     public String getFECHA_INICIO() {
@@ -1004,10 +950,5 @@ public class DatosBean {
     public void setALUMNOS_ACTIVOS_PERIODO(String ALUMNOS_ACTIVOS_PERIODO) {
         this.ALUMNOS_ACTIVOS_PERIODO = ALUMNOS_ACTIVOS_PERIODO;
     }
-    
-    
-
-    
-    
 
 }

@@ -55,6 +55,7 @@ public class PrincipalAction extends ActionSupport implements SessionAware {
     public ArrayList<DatosBean> ListaAlumnos2 = new ArrayList<DatosBean>();
     public List<DatosBean> ListaMunicipios = new ArrayList<DatosBean>();
     private List<DatosBean> ListaTipoAlumno = new ArrayList<>();
+    private List<DatosBean> ListaSituacionAlumno = new ArrayList<>();
 
     public ArrayList<ProyectoBean> BuscaRFC = new ArrayList<>();
     public ArrayList<ProyectoBean> ListaAsesores = new ArrayList<>();
@@ -192,6 +193,7 @@ public class PrincipalAction extends ActionSupport implements SessionAware {
 
             ListaMunicipios = con.listaMunicipios();
             ListaTipoAlumno = con.ConsultaTipoAlumno();
+            ListaSituacionAlumno = con.ConsultasituacionAlumno();
             ListaAlumnos = (ArrayList<DatosBean>) con.listaAlumnos(datos);
 
             return "SUCCESS";
@@ -2176,6 +2178,16 @@ public class PrincipalAction extends ActionSupport implements SessionAware {
     public void setListaTipoAlumno(List<DatosBean> ListaTipoAlumno) {
         this.ListaTipoAlumno = ListaTipoAlumno;
     }
+
+    public List<DatosBean> getListaSituacionAlumno() {
+        return ListaSituacionAlumno;
+    }
+
+    public void setListaSituacionAlumno(List<DatosBean> ListaSituacionAlumno) {
+        this.ListaSituacionAlumno = ListaSituacionAlumno;
+    }
+    
+    
 
     public ArrayList<ProyectoBean> getBuscaRFC() {
         return BuscaRFC;

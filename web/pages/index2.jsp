@@ -643,7 +643,7 @@
                                                                               <div class="form-group col-lg-4">
                                                                                   <label class="col-form-label" for="SituacionAca">Situación Academica:</label>
                                                                                   <div class="col-sm-auto">
-                                                                                      <s:textfield  cssClass="form-control text-uppercase" name="datos.SITUACIONACA" id="situacion" ></s:textfield>
+                                                                                      <s:select  name="datos.SITUACIONACA" id="situacion" list="ListaSituacionAlumno"  listKey="ID_SITUACION_ACA"  listValue="NOM_SITUACION"  headerKey="" headerValue="--SELECCIONE--" cssClass="form-control " ></s:select>                                                                                                                 
                                                                                       <s:fielderror fieldName="ErrorSituacion" cssClass="alert alert-danger"/>
                                                                                   </div> 
                                                                               </div>

@@ -2265,6 +2265,7 @@ public class RegistroArcAction extends ActionSupport implements SessionAware {
             boolean validaemail = false;
             boolean validacvecar = false;
             boolean validatipo_alumno = false;
+            boolean validaSituacion = false;
             boolean validafecha_ingreso = false;
 
             String Respuesta = null;
@@ -2427,6 +2428,32 @@ public class RegistroArcAction extends ActionSupport implements SessionAware {
                         }
 
                     }
+                    if (fila >= 2 && columna == 15) {
+
+                        String Situacion = null;
+
+                        Situacion = contenidoCelda;
+
+                        if (ValidaCadenas(Situacion)) {
+                            //Constantes.enviaMensajeConsola("TIENE CARACTERES NO PERMITIDOS EN EL APELLIDO PATERNO DE LA FILA  " + (fila) + " FAVOR DE VERIFICAR LOS DATOS");
+                            datos.setDESERROR("TIENE CARACTERES NO PERMITIDOS EN LA SITUACION ACADEMICA EN LA FILA  " + (fila) + " FAVOR DE VERIFICAR LOS DATOS");
+                            validaSituacion = false;
+                        } else {
+
+                            if (Situacion.equals("REGULAR")) {
+                                datos.setSITUACIONACA("1");
+                                validaSituacion = true;
+                            } else if (Situacion.equals("IRREGULAR")) {
+                                datos.setSITUACIONACA("2");
+                                validaSituacion = true;
+                            } else {
+                                datos.setDESERROR("LA SITUACION ACADEMICA  EN LA FILA  " + (fila) + " NO COINCIDE CON NINGUNA DE LAS OPCIONES DEBE SER (REGULAR O IRREGULAR), FAVOR DE VERIFICAR LOS DATOS");
+                                validaSituacion = false;
+                            }
+
+                        }
+
+                    }
 
                     if (fila >= 2 && columna == 16) {
 
@@ -2474,7 +2501,7 @@ public class RegistroArcAction extends ActionSupport implements SessionAware {
 
                 Constantes.enviaMensajeConsola("fila: " + fila);
 
-                if (validaMat && validacurp && validanom && validaapellidop && validaapellidom && validacvemun && validaTel && validaemail && validacvecar && validatipo_alumno && validafecha_ingreso) {
+                if (validaMat && validacurp && validanom && validaapellidop && validaapellidom && validacvemun && validaTel && validaemail && validacvecar && validatipo_alumno && validaSituacion && validafecha_ingreso) {
                     contador = contador + 1;
                 } else {
                     if (fila != 1) {
@@ -2488,6 +2515,7 @@ public class RegistroArcAction extends ActionSupport implements SessionAware {
                         Constantes.enviaMensajeConsola("TELEFONO: **************" + datos.getTELEFONO());
                         Constantes.enviaMensajeConsola("EMAIL: **************" + datos.getCORREO());
                         Constantes.enviaMensajeConsola("TIPO DE ALUMNO: **************" + datos.getTIPO_ALUM());
+                        Constantes.enviaMensajeConsola("SITUCION ACADEMICA: **************" + datos.getSITUACIONACA());
                         Constantes.enviaMensajeConsola("FECHA DE INGRESO: **************" + datos.getFECHA_INGRESO_DUAL());
 
                         datos.setSTATUS("CON ERRORES");
@@ -2788,7 +2816,19 @@ public class RegistroArcAction extends ActionSupport implements SessionAware {
                         datos.setPROMEDIOGRAL(contenidoCelda);
                     }
                     if (fila >= 2 && columna == 15) {
-                        datos.setSITUACIONACA(contenidoCelda);
+                        
+                        
+                        String Situacion = null;
+
+                        Situacion = contenidoCelda;
+
+                        if (Situacion.equals("REGULAR")) {
+                            datos.setSITUACIONACA("1");
+
+                        } else if (Situacion.equals("IRREGULAR")) {
+                            datos.setSITUACIONACA("2");
+
+                        }
                     }
                     if (fila >= 2 && columna == 16) {
 

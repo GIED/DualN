@@ -46,6 +46,8 @@ public class RegistraAlumnosAction extends ActionSupport implements SessionAware
     private List<DatosBean> ListaCarreras = new ArrayList<>();
 
     private List<DatosBean> ListaTipoAlumno = new ArrayList<>();
+    
+    private List<DatosBean> ListaSituacionAlumno = new ArrayList<>();
 
     private List<DatosBean> VerificaAlumno = new ArrayList<>();
 
@@ -208,6 +210,7 @@ public class RegistraAlumnosAction extends ActionSupport implements SessionAware
                         ListaMunicipios = con.listaMunicipios();
                         ListaCarreras = con.ConsultaCarreraExistente(obj);
                         ListaTipoAlumno = con.ConsultaTipoAlumno();
+                        ListaSituacionAlumno = con.ConsultasituacionAlumno();
 
                         al.setCURPA("");
 
@@ -549,6 +552,16 @@ public class RegistraAlumnosAction extends ActionSupport implements SessionAware
     public void setListaTipoAlumno(List<DatosBean> ListaTipoAlumno) {
         this.ListaTipoAlumno = ListaTipoAlumno;
     }
+
+    public List<DatosBean> getListaSituacionAlumno() {
+        return ListaSituacionAlumno;
+    }
+
+    public void setListaSituacionAlumno(List<DatosBean> ListaSituacionAlumno) {
+        this.ListaSituacionAlumno = ListaSituacionAlumno;
+    }
+    
+    
 
     public List<DatosBean> getVerificaAlumno() {
         return VerificaAlumno;
